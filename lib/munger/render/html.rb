@@ -25,7 +25,7 @@ module Munger #:nodoc:
       def render
         x = Builder::XmlMarkup.new
         
-        x.table(:class => @classes[:table]) do
+        x.table(:class => @classes[:table], :id=>'report-table') do
           
           x.tr do
             @report.columns.each do |column|
