@@ -63,7 +63,7 @@ module Munger #:nodoc:
         else
           row[names] = col_data
         end
-        @data[index] = Item.ensure(row)
+        @data[index] = clean_data(row)
       end
     end
     alias :add_columns :add_column
